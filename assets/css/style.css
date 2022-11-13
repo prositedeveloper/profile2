@@ -1,0 +1,332 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+  	flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	margin: 0 50px;
+}
+
+#wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+/* Header */
+.header {
+	background-color: #37CAF9;
+	margin-bottom: 100px;
+}
+
+.header__inner {
+	display: flex;
+	align-items: center;
+	padding: 30px 0;
+}
+
+.header__logo {
+	font-weight: 800;
+	color: #fff;
+	font-size: 25px;
+	margin-right: 74px;
+}
+
+/* Nav */
+.nav {
+	position: relative;
+}
+
+.nav__title {
+	display: none;
+}
+
+.nav__link {
+	margin-right: 30px;
+	color: #000;
+	text-decoration: none;
+	font-weight: 700;
+
+	transition: color .2s linear;
+}
+
+.nav__link:last-child {
+	margin-right: 0;
+}
+
+.nav__link:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.nav__close {
+	content: "";
+	height: 3px;
+	width: 25px;
+	background-color: #fff;
+	border-radius: 10px;
+
+	position: absolute;
+	top: 15px;
+	right: 5px;
+
+	transform: rotate(45deg);
+
+	display: none;
+}
+
+.nav__close:after {
+	content: "";
+	height: 3px;
+	width: 25px;
+	background-color: #fff;
+	border-radius: 10px;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	transform: rotate(90deg);
+}
+
+.nav__close:hover {
+	cursor: pointer;
+}
+
+/* Burger */
+.burger__menu {
+	content: "";
+	height: 4px;
+	width: 35px;
+	background-color: #fff;
+	border-radius: 10px;
+
+	position: relative;
+	display: none;
+}
+
+.burger__menu:before {
+	content: "";
+	height: 4px;
+	width: 35px;
+	background-color: #fff;
+	border-radius: 10px;
+
+	position: absolute;
+	top: -8px;
+}
+
+.burger__menu:after {
+	content: "";
+	height: 4px;
+	width: 35px;
+	background-color: #fff;
+	border-radius: 10px;
+
+	position: absolute;
+	top: 8px;
+}
+
+.burger__menu:hover {
+	cursor: pointer;
+}
+
+
+/* Profile */
+.profile {
+	background-color: #D9D9D9;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 20px 0;
+	margin-bottom: 20px;
+}
+
+.profile__photo {
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	border-radius: 50px;
+	margin-right: 20px;
+}
+
+.width {
+	width: 100px;
+}
+
+.profile__inner {
+	display: flex;
+	align-items: center;
+}
+
+.profile__fio {
+	font-weight: 700;
+}
+
+.profile__input {
+	background-color: #D9D9D9;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+}
+
+.profile__input form input {
+	width: 100%;
+	padding: 10px;
+}
+
+.profile__information {
+	background-color: #D9D9D9;
+	margin-right: 100px;
+	margin-left: 100px;
+	padding: 20px;
+	font-weight: 600;
+	margin-bottom: 100px;
+}
+
+.profile__btn {
+	padding-top: 10px;
+}
+
+.profile__button {
+	padding: 5px 20px;
+	background-color: #285782;
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 10px;
+
+	border: unset;
+	outline: 0;
+	border-radius: 10px;
+
+	transition: background-color .2s linear
+
+}
+
+.profile__button:hover {
+	background-color: darkblue;
+	cursor: pointer;
+}
+
+/* Footer */
+.footer {
+	background-color: #D9D9D9;
+	text-align: center;
+	padding: 30px 0;
+	font-weight: 700;
+}
+
+
+
+/* Media */
+@media (max-width: 767px) {
+
+	.width {
+		width: 140px;
+	}
+
+}
+
+
+@media (max-width: 567px) {
+
+	.nav {
+		display: none;
+		text-align: right;
+		position: absolute;
+		top: 90px;
+		right: 0;
+		width: 70%;
+
+		background-color: grey;
+		opacity: 0.8;
+		padding: 10px;
+	}
+
+	.nav__link {
+		display: block;
+		margin-right: 0;
+		margin-right: 40px;
+	}
+
+	.nav__link:last-child {
+		margin-right: 40px;
+	}
+
+	.header__inner {
+		justify-content: space-between;
+	}
+
+	.burger__menu {
+		display: block;
+	}
+
+	.nav__close {
+		display: block;
+	}
+
+	.profile {
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+
+	.profile__input {
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+
+	.profile__information {
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+
+	.container {
+		margin: 0 10px;
+	}
+
+	.profile__button {
+		padding: 5px 10px;
+	}
+
+}
+
+
+@media (max-width: 467px) {
+
+	.profile {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.profile__input {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.profile__information {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+}
